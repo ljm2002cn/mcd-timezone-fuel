@@ -47,6 +47,8 @@ A timezone-aware ordering decision Skill for **cross-timezone workers** (US/EU r
 
 它把「时区」当作**第一决策维度**，而不是一句附加说明。
 
+![时区决策链路](docs/flow.svg)
+
 ### 1. 先建立时区坐标
 
 调用 `now-time-info` 拿到当前时间，结合你所在的时区，算出：
