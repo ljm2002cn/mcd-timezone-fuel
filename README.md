@@ -6,6 +6,29 @@
 
 ---
 
+## 🇬🇧 English Summary
+
+**Other tools tell you if a meal is *worth it*. This one tells you what to eat *right now* — for your clock, not theirs.**
+
+A timezone-aware ordering decision Skill for **cross-timezone workers** (US/EU remote work, night shifts, on-call rotations), built on McDonald's China official MCP Server.
+
+**The gap:** every ordering assistant assumes you and the store share a timezone. For someone working across midnight, that assumption breaks — 3 AM in Shanghai is 3 PM in New York. Two real consequences:
+
+- **Decision lock-in** — late-night menus only expose what's currently in stock, usually the fried stuff. You never see the full menu or the best-value combos.
+- **Metabolic mismatch** — heavy, salty meals at the wrong hour on your body clock mean a sluggish morning. And late night is *exactly* when the fried options dominate.
+
+**What this does differently:**
+
+- **Timezone as the primary axis**, not an afterthought — 8 time-of-day strategies, each with its own selection logic
+- **Late-night (23:00–05:00) and early-morning tiers force a "light burden" option** and exclude fried items — a *constraint* derived from real nutrition data, not another nutrition table
+- **Three tiers** (light / balanced / indulgent) with official `calculate-price` verification showing base price → discount → actual total
+- **Cross-timezone ordering for someone else**: address → *that store's* menu → order (stores differ; address data never touches disk)
+- **Every datum carries its provenance** — unverified items are tagged `[待 MCP 核验]`; if MCP is unreachable, the Skill says so instead of passing off remembered prices as live data
+
+> ⭐ If this resonates, a **star** genuinely helps — this project is ranked purely by public star count in McDonald's 1024 Programmers' Day contest. Repo: `github.com/ljm2002cn/mcd-timezone-fuel`
+
+---
+
 ## 😵 痛点：这不是"半夜想吃麦当劳"，是"半夜必须吃麦当劳"
 
 北京时间凌晨 3 点，是纽约中午 3 点。这个时差让跨时区工作者的进食时刻和本地人完全错开，于是有两个具体问题：
